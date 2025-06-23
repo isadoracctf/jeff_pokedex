@@ -1,0 +1,125 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-classic');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pokemon Classic', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('imagens/fundo.png') no-repeat center center/cover;
+  flex-direction: column;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.auth-box {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.carousel img {
+  max-width: 402px;
+  max-height: 563px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.6s ease, opacity 0.4s ease;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  object-fit: contain;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+.carousel img.active {
+  display: block;
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: -50px;
+}
+
+.next {
+  right: -50px;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  background: white;
+  color: black;
+  padding: 10px;
+  width: 100%;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+  transition: transform 0.9s ease;
+}
+
+img {
+  transition: transform 0.9s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .carousel img {
+    height: 200px;
+  }
+
+  .prev, .next {
+    display: none;
+  }
+}

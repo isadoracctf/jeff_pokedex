@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeff Pokedex</title>
+  <link rel="icon" href="imagens/icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.cdnfonts.com/css/pokemon-classic" rel="stylesheet">
+</head>
+<body>
+<div class="auth-box" id="authBox">
+  <p>Digite o código de acesso:</p>
+  <input type="text" id="codeInput" />
+  <button onclick="checkCode()">Entrar</button>
+</div>
+
+<div id="content" class="hidden">
+  <div class="carousel-container">
+    <button class="button prev" onclick="prevImage()">&#10094;</button>
+    <div class="carousel" id="carousel">
+      	<img class="active" src="imagens/butterfree.png" onclick="flipImage(this)">   
+      	<img src="imagens/clefable.png" onclick="flipImage(this)">
+	<img src="imagens/darkrai.png" onclick="flipImage(this)">
+	<img src="imagens/eevee.png" onclick="flipImage(this)">
+	<img src="imagens/lapras.png" onclick="flipImage(this)">
+	<img src="imagens/melmetal.png" onclick="flipImage(this)">
+	<img src="imagens/ninetales.png" onclick="flipImage(this)">
+	<img src="imagens/psyduck.png" onclick="flipImage(this)">
+	<img src="imagens/shinx.png" onclick="flipImage(this)">
+	<img src="imagens/vulpixalola.png" onclick="flipImage(this)">
+    </div>
+    <button class="button next" onclick="nextImage()">&#10095;</button>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
